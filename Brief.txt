@@ -1,0 +1,15 @@
+BRIEF DI PROGETTAZIONE DI MARIO PER MARIO
+
+Creare un applicazione react con tutte le tecnologie indicate che permette
+
+--PARTE INIZIALE--
+
+Di creare un nuovo progetto 
+Ogni progetto ha un Nome e un ID 
+
+I progetti devono essere eliminabili e rinominabili 
+
+I percorsi iniziali sono:
+"/" = con tutti i progetti
+"create" = per creare un nuovo progetto
+"/{id}" = Per visualizzare il contenuto del progetto
