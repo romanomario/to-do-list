@@ -11,7 +11,8 @@ module.exports = {
   ],
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
+    project: ['./src/*']
   },
   plugins: [
     'react'

@@ -1,6 +1,12 @@
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Home: React.FC = () => {
+  const [projects, setProjects] = useState(null);
+
+  useEffect(() => {
+    //fetch()
+  }, []);
   
 const Button = styled.button`
   color: palevioletred;
