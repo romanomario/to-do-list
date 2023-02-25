@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Home: React.FC = () => {
+const Create: React.FC = () => {
   
 const Button = styled.button`
   color: palevioletred;
@@ -14,9 +14,9 @@ const Button = styled.button`
   return (
     <div>
       <h3>I tuoi progetti</h3>
-      <button>Crea un progetto +</button>
+      <p>Crea un nuovo progetto</p>
     </div>
   );
 };
 
-export default Home;
+export default Create;

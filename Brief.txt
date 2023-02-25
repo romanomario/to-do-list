@@ -13,3 +13,17 @@ I percorsi iniziali sono:
 "/" = con tutti i progetti
 "create" = per creare un nuovo progetto
 "/{id}" = Per visualizzare il contenuto del progetto
+
+--SECONDA PARTE--
+Inserire le attività all'interno dei progetti 
+Le attività hanno un nome e un id
+Possono avere due stati 4 stati
+Dormienti : colore standard (bianco)
+In corso : blue
+Completate : verdi
+In pausa : giallo
+
+Quando un attività viene iniziata si controlla prima lo stato in cui si è 
+Se viene avviata un attività mentra un altra è già in corso , quella in corso passa in pausa
+Le attività completate passano in fondo alla schermata
+In fondo alla schermata è possibile creare una nuova attività inserendo solo il nome in un input text 
