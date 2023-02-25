@@ -2,10 +2,10 @@ import './App.css'
 import Home from './home'
 import NavBar from './NavBar'
 import Create from './Create'
-import React, { Suspense} from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { Suspense } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-function App() {
+function App () {
   return (
     <div className="App">
       <NavBar />
