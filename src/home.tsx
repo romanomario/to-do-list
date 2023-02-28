@@ -9,6 +9,9 @@ const Button = styled.button`
   padding: 0.25em 1em;
   border: 2px solid palevioletred;
   border-radius: 3px;
+  width: 200px;
+  text-align: center;
+  text-transform: capitalize;
 `
 
 const Home: React.FC = () => {
@@ -28,6 +31,12 @@ const Home: React.FC = () => {
   const handleNewProjectNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setNewProjectName(event.target.value)
   }
+  const handleDeleteProject = (id: number) => {
+    const updatedProjects = projects.filter(project => project.id !== id)
+    setProjects(updatedProjects)
+    localStorage.setItem('projects', JSON.stringify(updatedProjects))
+  }
+
   useEffect(() => {
     const storedProjects = localStorage.getItem('projects')
     if (storedProjects != null) {
@@ -43,7 +52,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <h3>I tuoi progetti</h3>
-      <ProjectsList projects={projects} onAddProject={handleAddProject} />
+      <ProjectsList projects={projects} onDeleteProject={handleDeleteProject} onAddProject={handleAddProject} />
       <Button>Crea un progetto +</Button>
       <div>
         <input type="text" value={newProjectName} onChange={handleNewProjectNameChange} />
