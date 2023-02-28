@@ -1,5 +1,6 @@
 import './App.css'
 import Home from './home'
+import Project from './Project'
 import NavBar from './NavBar'
 import Create from './Create'
 import React, { Suspense } from 'react'
@@ -16,6 +17,7 @@ function App () {
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/projects/:id" element={<Project />} />
         <Route path="/create" element={<Create />} />
       </Routes>
     </Suspense>
