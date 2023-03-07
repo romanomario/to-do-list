@@ -9,13 +9,6 @@ interface Project {
   name: string
 }
 
-interface Props {
-  projects: Project[]
-  onAddProject: () => void
-  onDeleteProject: (id: number) => void
-  onRenameProject: (name: string, id: number) => void
-}
-
 const ProjectTab = styled.button`
   color: blue;
   font-size: 1em;
@@ -37,17 +30,25 @@ const IconContent = styled.span`
   float: right;
   padding-right: 10px;
 `
-const ProjectsList: React.FC<Props> = ({
+interface ProjectsListProps {
+  projects: Project[]
+  onAddProject: () => void
+  onDeleteProject: (id: number) => void
+  onRenameProject: (name: string, id: number) => void
+}
+
+const ProjectsList: React.FC<ProjectsListProps> = ({
   projects,
   onAddProject,
   onDeleteProject,
   onRenameProject
 }) => {
   return (
+
     <div>
       {projects.map((project) => (
         <div key={project.id}>
-          <Link to={`/projects/${project.id}`}>
+          <Link to={`/projects/${project.id}` }>
             <ProjectTab>
               {project.name}
               <IconContent onClick={(e) => { e.preventDefault(); e.stopPropagation(); onDeleteProject(project.id) }}>

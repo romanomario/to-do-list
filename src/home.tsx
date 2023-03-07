@@ -60,7 +60,7 @@ const Home: React.FC = () => {
     localStorage.setItem('projects', JSON.stringify(updatedProjects))
   }
 
-  // TODO
+  // TODO funzione che rinomina un progetto
   const handleRenameProject = (name: string, id: number) => {
     /*
     const projectId = 2
